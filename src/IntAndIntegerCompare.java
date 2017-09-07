@@ -15,11 +15,15 @@ public class IntAndIntegerCompare {
 		    Integer e =-1280;    		
 		    Integer f = new Integer(-1280);
 		    Integer g =-1280;
+		    Integer j =-127; 
+		    Integer k =-127	; 
 		    System.out.println(d==e);
 		    System.out.println(d==f);
 		    System.out.println(e==f);
 		    System.out.println(e.equals(f)); 
 		    System.out.println(e==g);
+		    System.out.println(j==k);
+		    
 		    
 		    
 	/*	    
