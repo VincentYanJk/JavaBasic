@@ -2,8 +2,8 @@ package com.pwc.springmvc;
 
 import java.lang.reflect.Method;
 
-import com.pwc.springmvc.annoation.Controller;
-import com.pwc.springmvc.annoation.RequestMapping;
+import com.pwc.springmvc.annotation.Controller;
+import com.pwc.springmvc.annotation.RequestMapping;
 import com.pwc.springmvc.controller.IndexController;
 
 public class AnnotationTesting {

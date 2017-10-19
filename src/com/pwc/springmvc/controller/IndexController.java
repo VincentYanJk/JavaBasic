@@ -1,7 +1,7 @@
 package com.pwc.springmvc.controller;
 
-import com.pwc.springmvc.annoation.Controller;
-import com.pwc.springmvc.annoation.RequestMapping;
+import com.pwc.springmvc.annotation.Controller;
+import com.pwc.springmvc.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/jason")

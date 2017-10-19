@@ -1,4 +1,4 @@
-package com.pwc.springmvc.annoation;
+package com.pwc.springmvc.annotation;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.TYPE;
