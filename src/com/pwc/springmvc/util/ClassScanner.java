@@ -7,31 +7,32 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.plaf.metal.MetalIconFactory.FolderIcon16;
 
 public class ClassScanner {
 
 public static Map<String, Class<?>> scannerClass(String basePackage){
 	
 	 Map<String, Class<?>> results = new HashMap<String, Class<?>>();
-	 //com.pwc.springmvc.controller
+	 //com.pwc.springmvc
 	String filePath= basePackage.replace(".", "/");
-	
+	// com/pwc/springmvc
+	System.out.println(filePath);
 	try {
 		Enumeration<URL> dirs = Thread.currentThread().getContextClassLoader().getResources(filePath);
 		
-		//  /C:/yanjikun_work/Eclipse_WorkSpace/JavaBasic/bin/com/pwc/springmvc/controller
+		//  /C:/yanjikun_work/Eclipse_WorkSpace/JavaBasic/bin/com/pwc/springmvc
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource(filePath).getPath();
 		
-		//System.out.println(rootPath);
-		if(rootPath!=null) {
-			rootPath = rootPath.substring(rootPath.lastIndexOf(filePath));
-		}
+		System.out.println(rootPath);
 		
+		if(rootPath!=null) {
+			rootPath = rootPath.substring(rootPath.lastIndexOf(filePath))+"/";
+		}
+		System.out.println(rootPath);
 		while (dirs.hasMoreElements()) {
 			URL url = (URL) dirs.nextElement();
-			//  /C:/yanjikun_work/Eclipse_WorkSpace/JavaBasic/bin/com/pwc/springmvc/controller
-			//System.out.println(url);
+			//  file:/C:/yanjikun_work/Eclipse_WorkSpace/JavaBasic/bin/com/pwc/springmvc
+			System.out.println(url);
 			if(url.getProtocol().equals("file")) {
 				File file  =new File(url.getPath().substring(1));
 				
@@ -56,20 +57,20 @@ public static Map<String, Class<?>> scannerClass(String basePackage){
 private static void scannerFiles(File floder,String rootPath,Map<String,Class<?>> classes) {
 	
 	File[] files = floder.listFiles();
-	
+	String rootP = rootPath;
 	
 	for (int i = 0; files!=null&&i < files.length ; i++) {
 		File file = files[i];
 		if(file.isDirectory()) {
 			
-			scannerFiles(file,rootPath+file.getName()+"/",classes);
+			scannerFiles(file,rootP+file.getName()+"/",classes);
 		}else {
 			String path = file.getAbsolutePath();
 			if(path.endsWith(".class")) {
 				
 				path = path.replace("\\", "/");
 				
-				String className = rootPath + path.substring(path.lastIndexOf("/"), path.indexOf(".class"));
+				String className = rootP.substring(0, rootP.lastIndexOf("/"))+ path.substring(path.lastIndexOf("/"), path.indexOf(".class"));
 				
 				className = className.replace("/", ".");
 				
@@ -93,7 +94,7 @@ private static void scannerFiles(File floder,String rootPath,Map<String,Class<?>
 public static void  main(String[] args) {
 	
 	
-	ClassScanner.scannerClass("com.pwc.springmvc.controller");
+	ClassScanner.scannerClass("com.pwc.springmvc");
 	
 }
 
