@@ -7,7 +7,7 @@ import com.pwc.springmvc.annotation.RequestMapping;
 import com.pwc.springmvc.controller.IndexController;
 
 public class AnnotationTesting {
-
+  
 	public static void main(String[] args) {
 
 		Class clazz = IndexController.class;
@@ -32,6 +32,8 @@ public class AnnotationTesting {
 
 				System.out.println("print each of url of method: " + path + method.getAnnotation(RequestMapping.class).value());
 
+				
+				
 			}
 
 		}
