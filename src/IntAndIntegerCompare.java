@@ -3,7 +3,7 @@ public class IntAndIntegerCompare {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 int a= 1;
+		    int a= 1;
 		    Integer b =1;    		
 		    Integer c = new Integer(1);
 		    System.out.println(a==b);
@@ -11,7 +11,7 @@ public class IntAndIntegerCompare {
 		    System.out.println(b==c);
 		    System.out.println(b.equals(c));
 		    System.out.println("********************************");
-		    int d= -1280;
+		        int d= -1280;
 		    Integer e =-1280;    		
 		    Integer f = new Integer(-1280);
 		    Integer g =-1280;
@@ -23,7 +23,13 @@ public class IntAndIntegerCompare {
 		    System.out.println(e.equals(f)); 
 		    System.out.println(e==g);
 		    System.out.println(j==k);
+		    System.out.println("********************************");
+		    Integer tt= 127;
+		    Integer pp= 127;
 		    
+		    System.out.println(tt==pp);
+		    System.out.println(tt.equals(pp));
+
 		    
 		    
 	/*	    
