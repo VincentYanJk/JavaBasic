@@ -11,17 +11,22 @@ public class StringComparison {
 		String cc = "testingdeveloping";
 		
 		String dd = aa+bb;
+		String oo = "testing"+"developing";
 		
 		String ee = new String("testing");
 		String ff = new String("testing").intern();
 		
-		System.out.println(cc==dd);
+//		System.out.println(dd==oo);
+		System.out.println(ee==ff);
+		//System.out.println(aa==ee);
+		
+/*		System.out.println(cc==dd);
 		System.out.println(cc.equals(dd));
 		
 		System.out.println(aa.equals(ee));
 		
-		System.out.println(aa==ff);
-		//
+		System.out.println(aa==ff);*/
+	
 		
 		
 		

@@ -6,10 +6,10 @@ public class IntAndIntegerCompare {
 		    int a= 1;
 		    Integer b =1;    		
 		    Integer c = new Integer(1);
-		    System.out.println(a==b);
+/*		    System.out.println(a==b);
 		    System.out.println(a==c);
 		    System.out.println(b==c);
-		    System.out.println(b.equals(c));
+		    System.out.println(b.equals(c));*/
 		    System.out.println("********************************");
 		        int d= -1280;
 		    Integer e =-1280;    		
@@ -17,12 +17,12 @@ public class IntAndIntegerCompare {
 		    Integer g =-1280;
 		    Integer j =-127; 
 		    Integer k =-127	; 
-		    System.out.println(d==e);
+/*		    System.out.println(d==e);
 		    System.out.println(d==f);
 		    System.out.println(e==f);
 		    System.out.println(e.equals(f)); 
 		    System.out.println(e==g);
-		    System.out.println(j==k);
+		    System.out.println(j==k);*/
 		    System.out.println("********************************");
 		    Integer tt= 127;
 		    Integer pp= 127;
