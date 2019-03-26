@@ -25,7 +25,11 @@ public class StringComparison {
 		
 		System.out.println(aa.equals(ee));
 		
+<<<<<<< HEAD
 		System.out.println(aa==ff);*/
+
+		System.out.println(aa==ff);
+
 	
 		
 		
