@@ -1,7 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=branch 'master' of https\://github.com/VincentYanJk/JavaBasic.git
 eclipse.preferences.version=1
-encoding//src/IntAndIntegerCompare.java=UTF-8
-<<<<<<< HEAD
-=======
 encoding//src/StringAndStringBuffertesting.java=UTF-8
->>>>>>> branch 'master' of https://github.com/VincentYanJk/JavaBasic.git
 encoding//src/com/pwc/concurrent/ThreadPoolTesting.java=UTF-8
+encoding//src/interview/IntAndIntegerCompare.java=UTF-8
